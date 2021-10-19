@@ -136,7 +136,6 @@ if(currentDay === 1) {
     console.log('que hoy no')
 }
 
-
 const toshi = 144
 //  Operador ternario estructura:
 //[condicion a evaluar] ? -> (si se cumple) [valor a agregar] : [segundo valor a agregar]
@@ -146,6 +145,10 @@ console.log(result)
 
 // 1. Pedir al usuario por prompt un numero entre 1 y 100
 //    - Verificar si es un par o impar e imprimir en resultado en consola
+function typeUrAge(toshi){
+    toshi = prompt(¨¨)
+    const result = toshi > 18 ? 'viejo' : 'shavo'
+}return result
 
 // 2. Pedir al usuario 2 numeros
 //    - Imprimir en consola cual es el menor de los 2

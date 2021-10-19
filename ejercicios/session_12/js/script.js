@@ -1,74 +1,40 @@
-//nombrando variables
-var primero = 'escope global'
-//cada variable tiene un valor (texto en azul claro)
-//cada valor de la variable tiene un string básico ('')
-var scope = 'scope de bloque'
+// const person = {
+//     name = 'fego',
+//     apellido: ''
+// };
 
-//metodo de consola que permite ver en consola el contenido del codigo en javscript
-//aqui console.log muestra el valor string de la variable "primero" en consola (la consola es la herramienta de desarrollador en el navegador web)
+// console.log(prsn)
 
-//el {console.log} es un objeto
-//un texto.valor también es un objeto
-{
-    console.log(primero, 'primis')
+// const nmbr = [1,2,3]
+// nmbr [1];
+
+// console.log(number)
+
+// const test = new String('este es un string')
+// console.log(test)
+
+//functional functions
+
+function Persona (name, lastName) {
+    this.name = name
+    this.lastName = lastName;
+    this.saludar = () => {
+        console.log(`hola ${this.name}`)
+    }
+};
+
+const otra = () => {
+    console.log(this);
+};
+
+console.log(otra())
+
+//con la palabra reservada "new" se convierte en funcion constructora
+const person1 = new Persona('EDDIE', 'BROOK')
+
+const person2 = new Persona('clestus', 'casady')
+//añadir metodos señalando la funcion constructora para crear un metodo
+Persona.prototype.saludar = function () {
+    console.log
 }
-// let perro = {} es una variable (let perro ) que está declarando un objeto ={}
-//si la variable empieza con [] indica que ese objeto está conformado por arreglos (arrays) marcados con {} y , 
-let perros = [{
-//nombre es el keyword o la propiedad del objeto
-//'chon' es el valor asignado a esa propiedad
-//el objeto en este ejercicio es perro y tiene 2 arrays dentro el 0 que es chon y el 1 que es bona
-    nombre: 'chon',
-    raza: 'callejero',
-},
-{
-    nombre: 'bona',
-    raza: 'callejero',
-    apodos: ['apodo2',3]
-},
-]
-//Este console log ACCEDE a la propiedad del objeto perro y en consola imprime el valor de la propiedad
-//console.log(perros[1])accede al arreglo del objeto, el [1] indica que debe mostrarse la segunda propiedad del arreglo porque comienza a contar desde el 0
-console.log(perros[1])
-console.log(perros)
-
-//formas de declarar variables:
-//var es la forma global no recomendable usar
-var nombre = 'Selena'
-//let es variable declarada 
-let nombreConLet = 'YOLANDA SALDIVAR'
-
-function test () {
-
-}
-test()
-const miFuncion = function (num1, num2=2) {
-    console.log(num1)
-    console.log(num2)
-    return num1 + num2;
-}
-console.log(miFuncion(1))
-console.log('-------operadores')
-
-// asignacion
-// = -> asignacion
-// += -> asginacion con adicion
-// -= asignacion con sustraccion
-// *=
-// /=
-// %=
-// logicos
-// comparacion
-// //
-
-/*operadores de comparación:
-
-== comparación
-=== extrema comparación
-!= diferente
-!== extremadamente diferente
-> mayor que 
-< menor que
->= mayor o igual que
-<= menor o igual que
-*/
+//this cambia de valor dependiendo en donde se encuentre escrito
