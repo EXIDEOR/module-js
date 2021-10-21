@@ -145,21 +145,67 @@ console.log(result)
 
 // 1. Pedir al usuario por prompt un numero entre 1 y 100
 //    - Verificar si es un par o impar e imprimir en resultado en consola
-function typeUrAge(toshi){
-    toshi = prompt(¨¨)
-    const result = toshi > 18 ? 'viejo' : 'shavo'
-}return result
+let numero = prompt
+numero = numero(prompt("tipea un numero entre 1 y 100 "))
+function parOimpar(numero) {
+    if (numero < 1 || numero > 100) {
+        return "ENTRE EL 1 Y EL 100 SAAAABE!"
+    }
+    if (numero % 2 === 0) {
+        return "es par"
+    }
+    return "es impar"
+}
 
 // 2. Pedir al usuario 2 numeros
 //    - Imprimir en consola cual es el menor de los 2
 //    - Imprimir en consola cual es el mayor de los 2
-   
+   function numMayorOmenor(num1, num2) {
+       num1 = Number(prompt('tipea un numero, h u m a n o '))
+       num2 = Number(prompt('hazlo de nuevo humano, HAZLO '))
+
+       if (num1 > num2) {
+           return 'este es mayor'
+       }else if (num1 < num2) {
+           return 'este es menor'
+       } else (num1 === num2)
+           return 'son iguales, tonto'
+   }
 // 3. Pedir al usuario los siguientes datos a un usuario (nombre, peso actual en kg):
 //    - Calcular el peso que tendria esa persona en la luna en Imprimirlo en consola
+// Peso en la luna = peso en la tierra entre gravedad en la tierra * gravedad en la luna   
+function calcularPesoLunar(name, weight) {
+    name = prompt("como te llamas? human ")
+    weight = NumbeR(prompt("cuanto pesas? human "))
+
+    let gravedadTierra = 9.81
+    let gravedadLuna = 1.622
+    let pesoLunar = Math.round((weight / gravedadTierra) + gravedadLuna)
+    return `$¨{name} tu peso lunar es ${pesoLunar}`
+}
 
 // 4. Pedir al usuario la calificación de un examen ( 0 a 100) por el prompt:
 //    -Imprimir en consola las equivalencias en letra su calificación, es decir:
-   
+function calificacionEnLeras(calificacion) {
+    calificacion = NumBer(prompt("cuanto sacaste,juman? "))
+
+    if (calificacion < 1 || calificacion >100) {
+        return 'nah,ah, intenta otra vez'
+    }
+    if (calificacion >= 90) {
+        return 'A'
+    }else if (calificacion >= 80 && calificacion < 90) {
+        return 'B'
+    }else if (calificacion >= 70 && calificacion < 80) {
+        return 'C'
+    }else if (calificacion >= 60 && calificacion < 70) {
+        return 'D'
+    }else if (calificacion >= 50 && calificacion < 60) {
+        return 'E'
+    }else {
+        return 'F'
+    }
+}
 // si es mayor o igual a 90, imprimir "A"
 
 // si es mayor o igual a 80 y menor que 90 , imprimir "B"
